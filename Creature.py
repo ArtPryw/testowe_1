@@ -101,6 +101,9 @@ class PlayerCharacter(Active_creature):
             res_fire, res_nature, crit_chance, hit_points, initiative,
             first_attack_chance, focus, precision, strength)
 
+    def use_skill(self, id):
+        pass
+
     def __repr__(self):
         return "Character class " + super().__repr__()
 

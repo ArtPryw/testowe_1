@@ -38,5 +38,3 @@ class Fire_ball(Offensive_skill):
         return "FIREBALL - fire type. Calc: base attack * 1.5 + 1dmg\
         per each focus point. Critical failure: del 50% dmg to caster."
 
-fb = Fire_ball(focus=5, char_crit_chance=25, spell_dmg=10,name="fb", attack_type='fire')
-print(fb.cast())
