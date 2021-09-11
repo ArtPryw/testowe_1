@@ -75,6 +75,36 @@ class Active_creature(Creature):
         return (super().__repr__() + " Resistance " + str(self.res_fire))
 
 
-d = Active_creature("test", dodge_chance=50, base_attack=3, first_attack_chance= 70,
-                    strength=1, crit_chance=20)
-print(d.base_attack_method())
+
+class PlayerCharacter(Active_creature):
+
+    def __init__(
+            self, char_id=10, name='', playable=0, attitude=0, is_alive=1, base_attack=1, dodge_chance=5,
+            parry_chance=5, res_holy=0, res_shadow=0, res_arcane=0, res_water=0,
+            res_fire=0, res_nature=0, crit_chance=5, hit_points=50, initiative=3,
+            first_attack_chance=75, focus=0, precision=0, strength=0, char_class = "default class",
+            specialization = 'default spec', nick_name = 'nick name', level = 1, exp = 0, lore = "",
+            languages = ['general'], list_of_skills = [], equip = []
+    ):
+        self.char_class = char_class
+        self.specialization = specialization
+        self.nick_name = nick_name
+        self.level = level
+        self.exp = exp
+        self.lore = lore
+        self.languages = languages
+        self.list_of_skills = list_of_skills
+        self.equip = equip
+
+        super().__init__(char_id, name, playable, attitude, is_alive, base_attack, dodge_chance,
+            parry_chance, res_holy, res_shadow, res_arcane, res_water,
+            res_fire, res_nature, crit_chance, hit_points, initiative,
+            first_attack_chance, focus, precision, strength)
+
+    def __repr__(self):
+        return "Character class " + super().__repr__()
+
+
+a = PlayerCharacter(name = "O")
+print(a)
+print(a.name)

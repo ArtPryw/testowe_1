@@ -42,8 +42,10 @@ unikaj()
 * Specjalizacja
 * Przydomek
 * Poziom
+* Exp
+* opis
 * Jezyki
-* Umiejętności
+lista Umiejętności
 
 - lista_ekwipunku[obiekty_klasy_przedmiot]
 
