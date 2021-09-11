@@ -104,7 +104,3 @@ class PlayerCharacter(Active_creature):
     def __repr__(self):
         return "Character class " + super().__repr__()
 
-
-a = PlayerCharacter(name = "O")
-print(a)
-print(a.name)
